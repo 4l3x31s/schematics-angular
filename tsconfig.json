@@ -9,6 +9,11 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
+    "paths": {
+      "my-lib-alexeis": [
+        "./dist/my-lib-alexeis"
+      ]
+    },
     "esModuleInterop": true,
     "sourceMap": true,
     "declaration": false,

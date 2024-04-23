@@ -1,0 +1,23 @@
+{
+  "name": "my-lib-alexeis",
+  "version": "0.0.6",
+  "scripts": {
+    "build": "tsc -p tsconfig.schematics.json",
+    "postbuild": "copyfiles schematics/collection.json ../../dist/my-lib-alexeis/"
+  },
+  "publishConfig": {
+    "registry": "http://localhost:4873"
+  },
+  "ng-add":{
+    "save":"true"
+  },
+  "schematics":"./schematics/collection.json",
+  "peerDependencies": {
+    "@angular/common": "^17.3.0",
+    "@angular/core": "^17.3.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}

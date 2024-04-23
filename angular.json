@@ -3,5 +3,41 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "my-lib-alexeis": {
+      "projectType": "library",
+      "root": "projects/my-lib-alexeis",
+      "sourceRoot": "projects/my-lib-alexeis/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/my-lib-alexeis/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/my-lib-alexeis/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/my-lib-alexeis/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/my-lib-alexeis/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "42b7f53d-ecf4-4115-a876-1c930ceddd10"
   }
 }
