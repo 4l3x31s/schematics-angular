@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id":"Schematics Ale",
+  "title": "Angular ng ruat",
+  "type":"object",
+  "description": "Crea nuevo proyecto",
+  "additionalProperties": false,
+  "properties": {
+    "name":{
+      "description": "Nombre del app",
+      "type":"string",
+      "$default": {
+        "$source":"argv",
+        "index":0
+      },
+      "x-prompt":"Cual sera el nombre que le daras?"
+    }
+  }
+}

@@ -1,12 +1,12 @@
 {
   "name": "my-lib-alexeis",
-  "version": "0.0.6",
+  "version": "0.0.16",
   "scripts": {
     "build": "tsc -p tsconfig.schematics.json",
-    "postbuild": "copyfiles schematics/collection.json ../../dist/my-lib-alexeis/"
+    "postbuild": "copyfiles schematics/**/*.json ../../dist/my-lib-alexeis/ && copyfiles schematics/*.json ../../dist/my-lib-alexeis/"
   },
   "publishConfig": {
-    "registry": "http://localhost:4873"
+    "registry": "http://172.21.43.79:4873"
   },
   "ng-add":{
     "save":"true"

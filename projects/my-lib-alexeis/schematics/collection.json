@@ -4,6 +4,12 @@
     "ng-add": {
       "description": "mi schematic",
       "factory": "./ng-add/index#ngAdd"
+    },
+    "ng-ruat":{
+      "factory": "./ng-new",
+      "schema": "./ng-new/schema.json",
+      "description": "Prueba crear",
+      "hidden": true
     }
   }
 }
